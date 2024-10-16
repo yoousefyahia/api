@@ -15,7 +15,7 @@ for (let i = 0; i < links.length; i++) {
 async function getData(yousef) {
     document.getElementById('data').innerHTML = ""; 
     try {
-        const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${yousef}&apiKey=cdf7de091a1647fca49af9710d8a5a03`);
+const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${yousef}&apiKey=cdf7de091a1647fca49af9710d8a5a03`);
         if (!response.ok) throw new Error('Network response was not ok');
         
         allData = (await response.json()).articles;
@@ -25,9 +25,6 @@ async function getData(yousef) {
         document.getElementById('data').innerHTML = "<p>Error fetching data. Please try again later.</p>";
     }
 }
-
-
-
 
 // عرض البيانات في الصفحة
 function display() {
