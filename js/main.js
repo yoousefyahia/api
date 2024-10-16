@@ -12,7 +12,6 @@ for (let i = 0; i < links.length; i++) {
     });
 }
 
-// جلب البيانات من API
 async function getData(yousef) {
     document.getElementById('data').innerHTML = ""; 
     try {
@@ -26,6 +25,9 @@ async function getData(yousef) {
         document.getElementById('data').innerHTML = "<p>Error fetching data. Please try again later.</p>";
     }
 }
+
+
+
 
 // عرض البيانات في الصفحة
 function display() {
